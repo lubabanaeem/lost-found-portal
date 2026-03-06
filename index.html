@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Lost And Found Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header flex space-between align-center px-5">
+        <div class="flex align-center">
+            <img src="exact.png" alt="University Logo">
+            <h3 class="m-0">Defriese University Law Form Portal</h3>
+        </div>
+        <button class="btn btn-outline-light">Sign In</button>
+    </header>
+
+    <section class="text-center pding-tb hero-section">
+        <div class="container">
+            <h1 class="header-font fw-bold">Report Lost or Found Items</h1>
+            <p class="lead">Submit your report and browse listings quickly and securely</p>
+            <a href="#report-form" class="btn btn-primary btn-lg mrgn-top">Report Form</a>
+        </div>
+    </section>
+
+    <main class="container spacing-corners">
+        <div class="form-card mrgn-lr form-wrap">
+            <h2>Report item</h2>
+            <form id="report-form">
+
+                <div class="mrgn-bot">
+                    <label for="type">Type</label>
+                    <select id="type" class="form-control">
+                        <option value="Lost">Lost</option>
+                        <option value="Found">Found</option>
+                    </select>
+                </div>
+
+                <div class="mrgn-bot">
+                    <label for="category">Category</label>
+                    <select id="category" class="form-control">
+                        <option value="Electronics">Electronics</option>
+                        <option value="Books">Books</option>
+                        <option value="ID Card">ID Card</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mrgn-bot">
+                    <label for="name">Item Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Wallet, Keys, etc.">
+                </div>
+
+                <div class="mrgn-bot">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" class="form-control" placeholder="Library, Cafeteria, etc.">
+                </div>
+
+                <div class="mrgn-bot">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" class="form-control">
+                </div>
+
+                <div class="mrgn-bot">
+                    <label for="contact">Contact Info</label>
+                    <input type="text" id="contact" class="form-control" placeholder="Email or phone">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <section class="container m">
+        <h2>Items Listing</h2>
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody id="itemsContainer"></tbody>
+        </table>
+    </section>
+
+    <footer>
+        &copy; 2026 Defriese University. All rights reserved.
+    </footer>
+
+    <script src="test.js"></script>
+</body>
+</html>
