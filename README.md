@@ -16,9 +16,9 @@ The item is stored in a JavaScript array.
 The page dynamically updates and displays the item in the list.
 Implementation Strategy
 The project is built using basic front-end technologies.
-HTML (index.html) – page structure and form layout
-CSS (style.css) – styling and layout
-JavaScript (test.js) – handles form submission and dynamically updates the item list
+HTML (index.html) – page structure and form layout.
+CSS (style.css) – styling and layout.
+JavaScript (test.js) – handles form submission and dynamically updates the item list.
 
 # Project Structure
 Lost-and-Found-Portal
@@ -31,6 +31,6 @@ Lost-and-Found-Portal
 
 # How to Run
 
-Download or clone the repository
-Open index.html in any web browser
-Fill out the form to submit a lost item repor
+Download or clone the repository.
+Open index.html in any web browser.
+Fill out the form to submit a lost item report.
