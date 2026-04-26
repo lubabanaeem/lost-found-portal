@@ -1,5 +1,6 @@
 //storing items
-let items = [];
+let items = JSON.parse(localStorage.getItem("items")) || [];
+displayitems();
 
 // getting form
 const form = document.getElementById("report-form");
@@ -25,6 +26,7 @@ form.addEventListener("submit", function (event) {
 
     //pushing items into my array
     items.push(item);
+    localStorage.setItem("items",JSON.stringify(items));
 
 
 
