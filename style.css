@@ -179,4 +179,29 @@ footer {
     text-align: center;
     margin-top: 50px;
 }
+
+.btn-danger {
+    background: transparent;
+    color: #2c3e50;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lost {
+    color: #7f8c8d;   /* soft gray */
+}
+
+.found {
+    color: #2c3e50;   /* your theme */
+}
   

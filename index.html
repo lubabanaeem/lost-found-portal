@@ -76,6 +76,12 @@
 
     <section class="container m">
         <h2>Items Listing</h2>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search by name or category..." 
+          class="form-control mrgn-top"
+        />
         <table class="custom-table">
             <thead>
                 <tr>
@@ -85,6 +91,7 @@
                     <th>Location</th>
                     <th>Date</th>
                     <th>Contact</th>
+                    <th>Action</th> <!-- for delete button -->
                 </tr>
             </thead>
             <tbody id="itemsContainer"></tbody>

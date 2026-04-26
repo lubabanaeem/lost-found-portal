@@ -38,21 +38,49 @@ form.addEventListener("submit", function (event) {
 
 });
 
-function displayitems() {
+document.getElementById("searchInput").addEventListener("input", function () {
+    displayitems(this.value);
+});
+
+function displayitems(search = "") {
     const container = document.getElementById("itemsContainer");
     container.innerHTML = ""; // clear previous rows
 
-    for (let i = 0; i < items.length; i++) {
-        container.innerHTML += `
+    let rows = "";
+
+for (let i = 0; i < items.length; i++) {
+
+    let text = (items[i].name + items[i].category).toLowerCase();
+
+    if (text.includes(search.toLowerCase())) {
+
+        rows += `
             <tr>
                 <td>${items[i].name}</td>
-                <td>${items[i].type}</td>
+                <td>
+                    <span class="badge ${items[i].type.toLowerCase()}">
+                        ${items[i].type}
+                    </span>
+                </td>
                 <td>${items[i].category}</td>
                 <td>${items[i].location}</td>
                 <td>${items[i].date}</td>
                 <td>${items[i].contact}</td>
+                <td>
+                    <button class="btn-danger" onclick="deleteItem(${i})">Delete</button>
+                </td>
             </tr>
-         `;
-
+        `;
     }
+}
+
+container.innerHTML = rows;
+}
+
+function deleteItem(index) {
+    items.splice(index, 1); // remove 1 item at position index
+
+    localStorage.setItem("items", JSON.stringify(items)); // update storage
+
+    displayitems(); // re-render UI
 }
